@@ -1,19 +1,160 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trabalho</title>
+    <title>Nicolas - Página Pessoal</title>
+    <style>
+        body {
+            background-color: #cacaca;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #401553;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1em;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        img {
+            border-radius: 8px;
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th {
+            color: #2980b9;
+            padding: 10px;
+            border: 1px solid #222222;
+            text-align: left;
+            background-color: #222222;
+        }
+        
+        td {
+            padding: 10px;
+            border: 1px solid #222222;
+            text-align: left;
+        }
+
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #db3434;
+        }
+
+        button {
+            background-color: #401553;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            margin-bottom: 20px;
+            display: block;
+            margin: 0 auto 20px;
+        }
+
+        button:hover {
+            background-color: #5d1d77;
+        }
+
+        #mensagem {
+            padding: 10px;
+            margin: 10px auto 20px;
+            background-color: #e8f4fc;
+            border-radius: 5px;
+            display: none;
+            max-width: 80%;
+            text-align: center;
+            border: 1px solid #2980b9;
+        }
+    </style>
 </head>
 <body>
-    <h1>Nicolas Luiz Pereira</h1>
-    <p>Me cham Nicolas Luiz Pereira, tenho 19 anos e sou de Cambuí-MG. Atualmente sou Auxiliar de Almoxarifado em uma empresa de logística farmacêutica e hospitalar, mas já atuei nas indústrias alimentícia e metalúrgica. Gosto de estudar sobre eletricidade, jogar basquete e praticar calistenia.</p>
-    <h3>Meus Interesses:</h3>
+    <h1>Nicolas</h1>
+    
+    <p>Meu nome é Nicolas, tenho 19 anos e moro em São Paulo. Sou estudante de elétrica industrial e tenho grande interesse por tecnologia, esportes e viagens. Adoro aprender coisas novas e desafiar meus limites físicos e mentais.</p>
+    
+    <button onclick="mostrarMensagem()">Clique para ver uma mensagem!</button>
+    <div id="mensagem"></div>
+    
+    <h2>Meus Hobbies</h2>
     <ul>
-        <li>Elétrica Industrial</li>
-        <li>Basquete</li>
-        <li>Calistenia</li>
+        <li>Jogar basquete</li>
+        <li>Praticar calistenia</li>
+        <li>Estudar programação</li>
     </ul>
+    
+    <img src="https://images.unsplash.com/photo-1546519638-68e109498ffc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Jogador de basquete" width="500">
+    
+    <h2>Países que quero visitar</h2>
+    <table>
+        <tr>
+            <th>País</th>
+            <th>Imagem</th>
+        </tr>
+        <tr>
+            <td>Itália</td>
+            <td><img src="https://images.unsplash.com/photo-1533676802871-eca1ae998cd5?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Itália" width="150"></td>
+        </tr>
+        <tr>
+            <td>Grécia</td>
+            <td><img src="https://plus.unsplash.com/premium_photo-1661964149725-fbf14eabd38c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Grécia" width="150"></td>
+        </tr>
+        <tr>
+            <td>Tailândia</td>
+            <td><img src="https://images.unsplash.com/photo-1528181304800-259b08848526?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80" alt="Tailândia" width="150"></td>
+        </tr>
+    </table>
+    
+    <p>Visite meu site de interesse: <a href="https://www.w3schools.com" target="_blank">W3Schools</a></p>
 
+    <script>
+        function mostrarMensagem() {
+            const mensagens = [
+                "Continue progredindo! Seu potencial é ilimitado.",
+                "Bem-vindo à sua página pessoal!",
+                "Cada dia é uma nova oportunidade para aprender algo novo.",
+                "Você está no caminho certo para se tornar um ótimo programador!",
+                "A persistência é o caminho do êxito."
+            ];
+            
+            const mensagemAleatoria = mensagens[Math.floor(Math.random() * mensagens.length)];
+            const elementoMensagem = document.getElementById('mensagem');
+            
+            elementoMensagem.textContent = mensagemAleatoria;
+            elementoMensagem.style.display = 'block';
+        }
+    </script>
 </body>
 </html>
